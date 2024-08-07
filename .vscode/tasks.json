@@ -37,14 +37,13 @@
       }
     },
     {
-      "label": "PICO-8 [macOS]: Create soft link",
+      "label": "PICO-8 [macOS]: Start",
       "type": "shell",
-      "command": "ln -s $(pwd) ~/Library/\"Application Support\"/pico-8/carts/paper-hockey",
+      "command": "/Applications/PICO-8.app/Contents/MacOS/pico8 -root_path $(pwd) -cdata_path $(pwd) paper-hockey.p8",
       "problemMatcher": [],
       "presentation": {
-        "echo": true,
-        "reveal": "never",
-        "showReuseMessage": false,
+        "focus": true,
+        "reveal": "always"
       }
     }
   ]
