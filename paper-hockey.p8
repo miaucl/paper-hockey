@@ -6,7 +6,8 @@ __lua__
 #include /src/debuggable.lua
 #include /src/runable.lua
 #include /src/main_menu.lua
-#include /src/map.lua
+#include /src/playground.lua
+#include /src/player.lua
 #include /src/main.lua
 __gfx__
 00111100633333366333333663333336666666666333333663636377776363630000000000000000000000000000000000000000000000000000000000000000

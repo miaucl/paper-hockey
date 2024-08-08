@@ -6,16 +6,12 @@ end
 
 function _update()
   for item in all(run_list) do
-    if item.Update then
-      item:Update()
-    end
+    item:Update()
   end
 end
 
 function _draw()
   for item in all(run_list) do
-    if item.Draw then
-      item:Draw()
-    end
+    item:Draw()
   end
 end

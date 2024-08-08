@@ -15,10 +15,10 @@ function RunableCreate()
 end
 
 function Runable:Update()
-  --printh("Update: "..self.ref)
+  printh("Update: "..self.ref)
 end
 
 
 function Runable:Draw()
-  --printh("Draw: "..self.ref)
+  printh("Draw: "..self.ref)
 end

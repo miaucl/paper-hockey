@@ -1,6 +1,6 @@
 ---@class MainMenu
----@field player_1_type number
----@field player_2_type number
+---@field player_1_type PlayerType
+---@field player_2_type PlayerType
 ---@field player_selected number
 MainMenu = RunableCreate()
 MainMenu.__index = MainMenu
@@ -40,11 +40,7 @@ function MainMenu:Update()
     self.player_2_type %= #available_player_types
   end
 
-  if (btnp(❎)) then
-    run_list = {
-      MapCreate()
-    }
-  end
+  if (btnp(❎)) self:InitMatch()
 end
 
 function MainMenu:Draw()
@@ -61,4 +57,16 @@ function MainMenu:Draw()
   circ(2,26+self.player_1_type*8,2,6)
   circ(66,26+self.player_2_type*8,2,6)
   ?"press X to start match",40,122,3
+end
+
+function MainMenu:InitMatch()
+  printh("init")
+  player1 = PlayerCreate(self.player_1_type)
+  player2 = PlayerCreate(self.player_2_type)
+  playground = PlaygroundCreate(player1,player2)
+  run_list = {
+    playground,
+    player1,
+    player2,
+  }
 end
